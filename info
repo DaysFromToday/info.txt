@@ -1,0 +1,16 @@
+Daysfrom.today is a website that allows users to calculate the number of days between two dates. The site features a simple and easy-to-use interface, making it a convenient tool for anyone looking to calculate the duration between two events. It also includes a calendar view that allows users to quickly identify specific dates and see how many days remain until a particular event. Overall, daysfrom.today is a useful tool for anyone looking to track the passage of time.
+Here's an example of how you could calculate the number of days between two dates in Python:
+from datetime import date
+
+# Enter the two dates in the format 'YYYY-MM-DD'
+date1 = input("Enter the first date: ")
+date2 = input("Enter the second date: ")
+
+date1 = date(*map(int, date1.split('-')))
+date2 = date(*map(int, date2.split('-')))
+
+# Calculate the difference between the two dates
+delta = date2 - date1
+
+# Print the number of days between the two dates
+print(delta.days)
